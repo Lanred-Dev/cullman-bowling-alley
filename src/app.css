@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src:
+        local("Baloo Bhaijaan 2 ExtraBold"),
+        local("BalooBhaijaan2-ExtraBold"),
+        url("fonts/BalooBhaijaan2/BalooBhaijaan2-ExtraBold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src:
+        local("Baloo Bhaijaan 2 Bold"),
+        local("BalooBhaijaan2-Bold"),
+        url("fonts/BalooBhaijaan2/BalooBhaijaan2-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src:
+        local("Baloo Bhaijaan 2 Medium"),
+        local("BalooBhaijaan2-Medium"),
+        url("fonts/BalooBhaijaan2/BalooBhaijaan2-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src:
+        local("Baloo Bhaijaan 2 SemiBold"),
+        local("BalooBhaijaan2-SemiBold"),
+        url("fonts/BalooBhaijaan2/BalooBhaijaan2-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src:
+        local("Baloo Bhaijaan 2 Regular"),
+        local("BalooBhaijaan2-Regular"),
+        url("fonts/BalooBhaijaan2/BalooBhaijaan2-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@layer base {
+    body {
+        @apply overflow-hidden bg-primary text-center font-balooBhaijaan2 text-primary;
+    }
+
+    .pageViewport {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: auto;
+    }
+
+    .pageViewport::-webkit-scrollbar {
+        @apply hidden;
+    }
+}
+
+@layer components {
+    button.primary,
+    a.primary {
+        @apply rounded-primary border-primary bg-button-primary bg-opacity-25 px-6 py-3 font-semibold backdrop-blur-md transition-[border-radius] duration-300 hover:rounded-hover;
+    }
+
+    a.secondary {
+        @apply px-6 py-3 font-semibold;
+    }
+}
