@@ -1,2 +1,8 @@
-<h1 class="text-5xl font-bold">Fun For Everyone<br>Young or Old</h1>
-<p></p>
+<script lang="ts">
+    import Hero from "$lib/pages/landing/hero.svelte";
+    import Parties from "$lib/pages/landing/parties.svelte";
+</script>
+
+<Hero />
+
+<Parties />

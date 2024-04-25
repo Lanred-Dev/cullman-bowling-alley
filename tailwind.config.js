@@ -9,18 +9,18 @@ export default {
         extend: {
             colors: {
                 primary: {
-                    DEFAULT: "#000000",
-                    50: "#2E2E2E",
-                    100: "#2B2B2B",
-                    200: "#262626",
-                    300: "#212121",
-                    400: "#1C1C1C",
-                    500: "#171717",
-                    600: "#121212",
-                    700: "#0D0D0D",
-                    800: "#080808",
-                    900: "#030303",
-                    950: "#000000",
+                    DEFAULT: "#212121",
+                    50: "#343434",
+                    100: "#333333",
+                    200: "#303030",
+                    300: "#2E2E2E",
+                    400: "#2B2B2B",
+                    500: "#292929",
+                    600: "#262626",
+                    700: "#242424",
+                    800: "#212121",
+                    900: "#121212",
+                    950: "#0A0A0A",
                 },
                 light: {
                     DEFAULT: "#FFFFFF",
@@ -42,6 +42,7 @@ export default {
             },
 
             backgroundColor: {
+                brand: "#4fd500",
                 primary: "#fafafa",
                 secondary: {
                     DEFAULT: "#212121",
@@ -59,7 +60,7 @@ export default {
                 },
                 dark: "#000000",
                 button: {
-                    primary: "#ff4747",
+                    primary: "#4fd500",
                     secondary: "#fff837",
                 },
             },
@@ -73,12 +74,7 @@ export default {
             },
 
             borderRadius: {
-                primary: "10px",
-                hover: "25px",
-            },
-
-            transitionTimingFunction: {
-                cubic: "cubic-bezier(0.65, 0, 0.35, 1)",
+                primary: "7px",
             },
         },
     },

@@ -1,29 +1,29 @@
 <script lang="ts">
     const LINKS = [
         {
-            name: "Home",
-            url: "",
+            name: "About",
+            url: "/",
         },
         {
-            name: "About",
-            url: "",
+            name: "Leagues",
+            url: "/leagues",
         },
         {
             name: "Hours and Rates",
-            url: "",
+            url: "/hours-and-rates",
         },
         {
             name: "Contact and Reservations",
-            url: "",
+            url: "/contact",
         },
         {
             name: "Valley Tavern and Grille",
-            url: "",
+            url: "https://valleytavernandgri.wixsite.com/cullman",
         },
     ];
 </script>
 
-<header class="flex w-full select-none items-center justify-between gap-4 bg-transparent py-12 px-36">
+<header class="flex w-full select-none items-center justify-between gap-4 py-12 px-36">
     <div class="text-left">
         <p class="text-3xl font-bold">Cullman Bowling Center</p>
 

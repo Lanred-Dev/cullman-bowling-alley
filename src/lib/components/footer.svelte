@@ -13,15 +13,15 @@
     ];
 </script>
 
-<footer class="flex flex-col w-screen items-center justify-between px-36 py-24 text-lg font-semibold bg-dark text-light mt-12 gap-12">
-    <nav class="flex list-none gap-8 text-base font-medium">
+<footer class="flex flex-col w-screen items-center justify-between px-36 py-24 mt-12 gap-8">
+    <nav class="flex list-none gap-3 text-base font-medium">
         {#each SOCIALS as social}
-            <a href={social.url}><img src={social.icon} alt={social.name} class="aspect-square w-10" /></a>
+            <a href={social.url} class="p-3 bg-secondary-700 rounded-full"><img src={social.icon} alt={social.name} class="aspect-square w-6" /></a>
         {/each}
     </nav>
 
-    <div>
-        <p><span class="text-light-950">©2024</span> Cullman Bowling Center</p>
-        <p class="mt-0.5"><span class="text-light-950">Developed by</span> <a href="https://github.com/Lanred-Dev">Landon Redmond</a></p>
+    <div class="flex gap-4 font-semibold">
+        <p>©2024 Cullman Bowling Center</p>
+        <p>Design by <a href="https://github.com/Lanred-Dev">Landon Redmond</a></p>
     </div>
 </footer>

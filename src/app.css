@@ -76,7 +76,7 @@
 @layer components {
     button.primary,
     a.primary {
-        @apply rounded-primary border-primary bg-button-primary bg-opacity-25 px-6 py-3 font-semibold backdrop-blur-md transition-[border-radius] duration-300 hover:rounded-hover;
+        @apply rounded-primary border-primary bg-button-primary bg-opacity-50 px-6 py-3 font-semibold text-primary-950 backdrop-blur-md;
     }
 
     a.secondary {
