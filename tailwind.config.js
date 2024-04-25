@@ -22,6 +22,20 @@ export default {
                     900: "#030303",
                     950: "#000000",
                 },
+                light: {
+                    DEFAULT: "#FFFFFF",
+                    50: "#FFFFFF",
+                    100: "#FBFBFB",
+                    200: "#F4F4F4",
+                    300: "#ECECEC",
+                    400: "#E4E4E4",
+                    500: "#DDDDDD",
+                    600: "#D5D5D5",
+                    700: "#CDCDCD",
+                    800: "#C6C6C6",
+                    900: "#BEBEBE",
+                    950: "#BABABA",
+                },
                 button: {
                     primary: "#000000",
                 },
@@ -43,6 +57,7 @@ export default {
                     900: "#191919",
                     950: "#161616",
                 },
+                dark: "#000000",
                 button: {
                     primary: "#ff4747",
                     secondary: "#fff837",
