@@ -15,7 +15,7 @@
         {
             text: "Learn more",
             type: "secondary",
-            url: "/",
+            url: "/birthdays",
         },
     ]}
 />

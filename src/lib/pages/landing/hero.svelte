@@ -16,57 +16,36 @@
         </div>
     </div>
 
-    <div class="background">
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="absolute w-full h-full top-0 left-0 flex grow z-[-1]">
+        {#each Array(3) as _value}
+            <div class="backgroundCircle absolute rounded-full h-0 opacity-40 -translate-x-1/2 -translate-y-1/2 bg-brand" />
+        {/each}
     </div>
 </div>
 
 <style lang="postcss">
-    .background {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-grow: 1;
-        z-index: -1;
+    .backgroundCircle {
+        filter: blur(300px);
     }
 
-    .background div {
-        position: absolute;
-        border-radius: 100%;
-        height: 0;
-        filter: blur(240vw);
-        opacity: 0.4;
-    }
-
-    .background div:nth-child(1) {
-        background: linear-gradient(132deg, #4fd400 0%, #4fd500 100%);
+    .backgroundCircle:nth-child(1) {
         width: 33%;
         padding-top: 33%;
         left: 20%;
         top: 40%;
-        transform: translateX(-50%) translateY(-50%);
     }
 
-    .background div:nth-child(2) {
-        background: linear-gradient(132deg, #4fd400 0%, #4fd400 100%);
+    .backgroundCircle:nth-child(2) {
         width: 2%;
         padding-top: 2%;
         left: 52%;
         top: 50%;
-        transform: translateX(-50%) translateY(-50%);
     }
 
-    .background div:nth-child(3) {
-        background: linear-gradient(132deg, #4fd400 0%, #4fd400 100%);
-        width: 47%;
-        padding-top: 47%;
+    .backgroundCircle:nth-child(3) {
+        width: 42%;
+        padding-top: 27%;
         left: 80%;
-        top: 80%;
-        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
     }
 </style>
