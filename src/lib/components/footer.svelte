@@ -22,6 +22,6 @@
 
     <div class="flex gap-4 font-semibold">
         <p>©2024 Cullman Bowling Center</p>
-        <p>Design by <a href="https://github.com/Lanred-Dev">Landon Redmond</a></p>
+        <p>Design by <a href="https://github.com/Lanred-Dev">Landon Redmond</a> & Kimberly Wilt</p>
     </div>
 </footer>
