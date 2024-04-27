@@ -1,5 +1,7 @@
 <script lang="ts">
     import Section from "./components/section.svelte";
+
+    const PRESENT_COLORS: string[] = ["#44a7f2", "#ff460f", "#f5bd3d"]
 </script>
 
 <Section
@@ -19,9 +21,9 @@
         },
     ]}
 >
-    <div class="flex justify-center items-end">
+    <div class="flex justify-center items-end absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 gap-10">
         {#each Array(3) as _value, index}
-            <div class="present" style="--color: #f75d4c;" data-id={index}>
+            <div class="present" style="--color: {PRESENT_COLORS[index]};" data-id={index}>
                 <div class="lid" />
                 <div class="box" />
 
@@ -44,10 +46,15 @@
         @apply relative flex flex-col items-center scale-150;
     }
 
+    .present[data-id="0"], .present[data-id="2"] {
+        @apply z-[1];
+    }
+
     .present[data-id="0"] {
-        right: -20px;
+        right: -15px;
+        bottom: -15px;
         width: 120px;
-        height: 130px;
+        height: 120px;
     }
 
     .present[data-id="1"] {
@@ -56,9 +63,10 @@
     }
 
     .present[data-id="2"] {
-        left: -20px;
+        left: -5px;
+        bottom: -23px;
         width: 100px;
-        height: 110px;
+        height: 90px;
     }
 
     .present .lid {
@@ -85,7 +93,7 @@
     .present .ribbon::before {
         content: "";
         height: 5px;
-        top: 21%;
+        top: 19%;
         @apply absolute block w-full bg-black bg-opacity-30;
     }
 
