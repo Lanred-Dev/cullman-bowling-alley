@@ -1,7 +1,54 @@
 <script lang="ts">
     import Section from "./components/section.svelte";
+    import { onMount } from "svelte";
+    import {create} from "canvas-confetti";
 
-    const PRESENT_COLORS: string[] = ["#44a7f2", "#ff460f", "#f5bd3d"]
+    const PRESENT_COLORS: string[] = ["#44a7f2", "#ff460f", "#f5bd3d"];
+    const CONFETTI_COLORS: Array<string> = ["#26ccff", "#a25afd", "#ff5e7e", "#88ff5a", "#fcff42", "#ffa62d", "#ff36ff"];
+    const CONFETTI_COUNT: number = 15;
+    const TICKS: number = 80;
+
+    let confettiCanvas: HTMLCanvasElement;
+
+    function random(min: number, max: number): number {
+        return Math.random() * (max - min) + min;
+    }
+
+    function setup() {
+        const confetti = create(confettiCanvas, {
+            resize: true,
+            useWorker: true,
+            disableForReducedMotion: true,
+        });
+
+        let skew: number = 0;
+        const updateInterval = setInterval(() => {
+            requestAnimationFrame(() => {
+                skew = Math.max(0.8, skew - 0.001);
+
+                confetti({
+                    particleCount: 1,
+                    startVelocity: 0,
+                    ticks: TICKS,
+                    origin: {
+                        x: random(0.1, 0.9),
+                        y: random(0.1, 0.9) * skew,
+                    },
+                    colors: [CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)]],
+                    gravity: random(0.4, 0.6),
+                    scalar: 3,
+                    drift: random(-0.2, 0.8),
+                    shapes: ["square"],
+                });
+            });
+        }, 1000 / CONFETTI_COUNT);
+
+        return () => {
+            clearInterval(updateInterval);
+        };
+    }
+
+    onMount(setup);
 </script>
 
 <Section
@@ -21,7 +68,9 @@
         },
     ]}
 >
-    <div class="flex justify-center items-end absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 gap-10">
+    <canvas class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2" bind:this={confettiCanvas} />
+
+    <div class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-end justify-center gap-10">
         {#each Array(3) as _value, index}
             <div class="present" style="--color: {PRESENT_COLORS[index]};" data-id={index}>
                 <div class="lid" />
@@ -43,10 +92,11 @@
     .present {
         width: 120px;
         height: 120px;
-        @apply relative flex flex-col items-center scale-150;
+        @apply relative flex scale-150 flex-col items-center;
     }
 
-    .present[data-id="0"], .present[data-id="2"] {
+    .present[data-id="0"],
+    .present[data-id="2"] {
         @apply z-[1];
     }
 
