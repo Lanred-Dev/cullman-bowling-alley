@@ -85,6 +85,30 @@
         @apply absolute;
     }
 
+    .podium .trophy:before {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        right: 25px;
+        bottom: 25px;
+        border: 6px solid white;
+        border-left-color: transparent;
+        border-radius: 50%;
+    }
+
+    .podium .trophy:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background:
+            linear-gradient(#fff, #fff) left/6px 100% no-repeat,
+            linear-gradient(#fff, #fff) bottom/100% 6px no-repeat;
+        top: 22px;
+        left: 29px;
+    }
+
     .podium .number {
         @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl font-bold text-primary text-opacity-30;
     }

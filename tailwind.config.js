@@ -43,7 +43,20 @@ export default {
 
             backgroundColor: {
                 brand: "#4fd500",
-                primary: "#fafafa",
+                primary: {
+                    DEFAULT: "#FAFAFA",
+                    50: "#FDFDFD",
+                    100: "#FAFAFA",
+                    200: "#F0F0F0",
+                    300: "#E6E6E6",
+                    400: "#DBDBDB",
+                    500: "#D1D1D1",
+                    600: "#C7C7C7",
+                    700: "#BDBDBD",
+                    800: "#B3B3B3",
+                    900: "#A8A8A8",
+                    950: "#A3A3A3",
+                },
                 secondary: {
                     DEFAULT: "#212121",
                     50: "#474747",
