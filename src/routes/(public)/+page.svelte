@@ -3,9 +3,11 @@
 
     import Parties from "$lib/pages/landing/parties.svelte";
     import Leagues from "$lib/pages/landing/leagues.svelte";
+    import Reviews from "$lib/pages/landing/reviews.svelte";
 </script>
 
 <Hero />
 
 <Parties />
 <Leagues />
+<Reviews />
