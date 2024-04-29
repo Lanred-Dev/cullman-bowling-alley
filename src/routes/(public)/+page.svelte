@@ -8,6 +8,6 @@
 
 <Hero />
 
+<Reviews />
 <Parties />
 <Leagues />
-<Reviews />

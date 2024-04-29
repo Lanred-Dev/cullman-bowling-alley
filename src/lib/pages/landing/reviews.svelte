@@ -121,8 +121,8 @@
 
 <div class="section relative flex h-fit min-h-screen w-full flex-col items-center justify-center gap-10 px-5 sm:px-10 lg:h-screen lg:px-0" id="section-reviews">
     <div class="flex w-full flex-col items-center justify-center text-center">
-        <h1 class="text-5xl font-bold">500+ Reviews, <span class="bg-gradient-to-br from-amber-300 to-yellow-400 bg-clip-text text-transparent">4.4 Rating</span></h1>
-        <p class="mt-5 max-w-[50%] text-lg">Discover what others are saying about us with over 500 reviews and an impressive 4.4 rating. Dive into the feedback from our community and see why they love bowling with us!</p>
+        <h1 class="text-5xl font-bold">700+ Reviews, <span class="bg-gradient-to-br from-brand-600 to-brand-700 bg-clip-text text-transparent">4.3 Overall Rating</span></h1>
+        <p class="mt-5 max-w-[50%] text-lg">Discover what others are saying about us with over 700 reviews and a 4.3 overall rating. Dive into the feedback from our community and see why they love bowling with us!</p>
     </div>
 
     <div class="relative mt-10 max-h-[70vh] w-full overflow-hidden">
