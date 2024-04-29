@@ -1,7 +1,7 @@
 <script lang="ts">
     import Section from "./components/section.svelte";
     import { onMount } from "svelte";
-    import {create} from "canvas-confetti";
+    import { create } from "canvas-confetti";
 
     const PRESENT_COLORS: string[] = ["#44a7f2", "#ff460f", "#f5bd3d"];
     const CONFETTI_COLORS: Array<string> = ["#26ccff", "#a25afd", "#ff5e7e", "#88ff5a", "#fcff42", "#ffa62d", "#ff36ff"];
@@ -68,9 +68,9 @@
         },
     ]}
 >
-    <canvas class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2" bind:this={confettiCanvas} />
+    <canvas class="aspect-square w-full lg:absolute lg:left-1/2 lg:top-1/2 lg:h-full lg:-translate-x-1/2 lg:-translate-y-1/2" bind:this={confettiCanvas} />
 
-    <div class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-end justify-center gap-10">
+    <div class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-end justify-center sm:gap-10">
         {#each Array(3) as _value, index}
             <div class="present" style="--color: {PRESENT_COLORS[index]};" data-id={index}>
                 <div class="lid" />
@@ -92,7 +92,7 @@
     .present {
         width: 120px;
         height: 120px;
-        @apply relative flex scale-150 flex-col items-center;
+        @apply relative flex scale-100 flex-col items-center sm:scale-150;
     }
 
     .present[data-id="0"],
@@ -117,6 +117,18 @@
         bottom: -23px;
         width: 100px;
         height: 90px;
+    }
+
+    @media (max-width: 768px) {
+        .present[data-id="0"] {
+            right: -25px;
+            bottom: 0px;
+        }
+
+        .present[data-id="2"] {
+            left: -20px;
+            bottom: 0px;
+        }
     }
 
     .present .lid {

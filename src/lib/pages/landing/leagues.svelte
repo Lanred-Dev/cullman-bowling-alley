@@ -21,7 +21,7 @@
         },
     ]}
 >
-    <div class="absolute left-1/2 top-[52.5%] flex -translate-x-1/2 -translate-y-1/2 items-end justify-center">
+    <div class="flex items-end justify-center pt-48 lg:absolute lg:left-1/2 lg:top-[52.5%] lg:-translate-x-1/2 lg:-translate-y-1/2 lg:pt-0">
         {#each Array(3) as _value, index}
             <div class="podium" data-id={index}>
                 <div class="stand" />
@@ -68,6 +68,20 @@
         height: 140px;
         box-shadow: inset 6px 6px rgba(129, 129, 129, 0.3);
         @apply rounded-br-md;
+    }
+
+    @media (max-width: 768px) {
+        .podium[data-id="0"] {
+            height: 160px;
+        }
+
+        .podium[data-id="1"] {
+            height: 220px;
+        }
+
+        .podium[data-id="2"] {
+            height: 120px;
+        }
     }
 
     .podium[data-id="2"],

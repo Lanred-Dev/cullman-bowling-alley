@@ -1,12 +1,12 @@
-<div class="relative h-[80vh] w-screen">
-    <div class="absolute left-1/2 top-[15%] flex w-screen -translate-x-1/2 flex-col items-center justify-center px-[16%]">
-        <h1 class="text-5xl font-bold">Fun For Everyone<br />Young or Old</h1>
-        <p class="mt-5 max-w-[70%] text-lg">The Cullman Bowling Center offers upgraded bowling lanes with projector screens and TV monitors, complemented by a full-scale restaurant, arcade area, and family-friendly activities such as Birthday Parties, Leagues, and Glow Bowling on weekends.</p>
+<div class="relative h-screen w-screen md:h-[80vh]">
+    <div class="absolute left-1/2 top-[10%] flex w-screen -translate-x-1/2 flex-col items-center justify-center px-4 md:top-[15%] md:px-[16%]">
+        <h1 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">Fun For Everyone<br />Young or Old</h1>
+        <p class="mt-5 w-full px-5 text-lg sm:px-10 md:text-xl lg:w-fit lg:max-w-3xl lg:px-0">The Cullman Bowling Center offers upgraded bowling lanes with TV monitors, complemented by a full-scale restaurant, arcade area, and family-friendly activities such as Birthday Parties, Leagues, and Glow Bowling on weekends.</p>
 
         <div class="mt-10 flex gap-2">
             <a class="primary" href="/contact">Make a Reservation</a>
 
-            <a class="secondary flex gap-0.5 items-center" href="/hours-and-rates">
+            <a class="secondary flex items-center gap-0.5" href="/hours-and-rates">
                 Our Hours
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#212121" viewBox="0 0 24 24" stroke-width="1" stroke="#212121" class="aspect-square h-[1.15rem] pt-0.5">
@@ -16,9 +16,9 @@
         </div>
     </div>
 
-    <div class="absolute w-full h-full top-0 left-0 flex grow z-[-1]">
+    <div class="absolute left-0 top-0 z-[-1] flex h-full w-full">
         {#each Array(3) as _value}
-            <div class="backgroundCircle absolute rounded-full h-0 opacity-40 -translate-x-1/2 -translate-y-1/2 bg-brand" />
+            <div class="backgroundCircle absolute h-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand opacity-40" />
         {/each}
     </div>
 </div>
@@ -47,5 +47,22 @@
         padding-top: 27%;
         left: 80%;
         top: 50%;
+    }
+
+    @media (max-width: 768px) {
+        .backgroundCircle {
+            filter: blur(150px) brightness(200%);
+        }
+
+        .backgroundCircle:nth-child(1) {
+            top: 12%;
+            width: 40%;
+        }
+
+        .backgroundCircle:nth-child(2) {
+            width: 22%;
+            top: 35%;
+            padding-top: 22%;
+        }
     }
 </style>
