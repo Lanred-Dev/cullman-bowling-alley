@@ -8,6 +8,20 @@ export default {
 
         extend: {
             colors: {
+                brand: {
+                    DEFAULT: "#4FD500",
+                    50: "#5BF600",
+                    100: "#5AF400",
+                    200: "#58EF00",
+                    300: "#57E900",
+                    400: "#55E400",
+                    500: "#53DF00",
+                    600: "#51DA00",
+                    700: "#4FD500",
+                    800: "#49C600",
+                    900: "#44B600",
+                    950: "#41AF00",
+                },
                 primary: {
                     DEFAULT: "#212121",
                     50: "#343434",
@@ -36,13 +50,23 @@ export default {
                     900: "#BEBEBE",
                     950: "#BABABA",
                 },
-                button: {
-                    primary: "#000000",
-                },
             },
 
             backgroundColor: {
-                brand: "#4fd500",
+                brand: {
+                    DEFAULT: "#4FD500",
+                    50: "#5BF600",
+                    100: "#5AF400",
+                    200: "#58EF00",
+                    300: "#57E900",
+                    400: "#55E400",
+                    500: "#53DF00",
+                    600: "#51DA00",
+                    700: "#4FD500",
+                    800: "#49C600",
+                    900: "#44B600",
+                    950: "#41AF00",
+                },
                 primary: {
                     DEFAULT: "#FAFAFA",
                     50: "#FDFDFD",
@@ -71,10 +95,8 @@ export default {
                     900: "#191919",
                     950: "#161616",
                 },
-                dark: "#000000",
                 button: {
                     primary: "#4fd500",
-                    secondary: "#fff837",
                 },
             },
 
