@@ -1,5 +1,5 @@
 <div class="relative h-screen w-screen md:h-[80vh]">
-    <div class="absolute left-1/2 top-[10%] flex w-screen -translate-x-1/2 flex-col items-center justify-center px-4 md:top-[15%] md:px-[16%]">
+    <div class="absolute left-1/2 top-[5%] flex w-screen -translate-x-1/2 flex-col items-center justify-center px-4 md:top-[15%] md:px-[16%]">
         <h1 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">Fun For Everyone<br />Young or Old</h1>
         <p class="mt-5 w-full px-5 text-lg sm:px-10 md:text-xl lg:w-fit lg:max-w-3xl lg:px-0">The Cullman Bowling Center offers upgraded bowling lanes with TV monitors, complemented by a full-scale restaurant, arcade area, and family-friendly activities such as Birthday Parties, Leagues, and Glow Bowling on weekends.</p>
 
