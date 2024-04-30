@@ -5,7 +5,7 @@
 
     const PRESENT_COLORS: string[] = ["#44a7f2", "#ff460f", "#f5bd3d"];
     const CONFETTI_COLORS: Array<string> = ["#26ccff", "#a25afd", "#ff5e7e", "#88ff5a", "#fcff42", "#ffa62d", "#ff36ff"];
-    const CONFETTI_COUNT: number = 15;
+    const CONFETTI_COUNT: number = 10;
     const TICKS: number = 80;
 
     let confettiCanvas: HTMLCanvasElement;
@@ -36,8 +36,8 @@
                     },
                     colors: [CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)]],
                     gravity: random(0.4, 0.6),
-                    scalar: 3,
-                    drift: random(-0.2, 0.8),
+                    scalar: random(2.8, 3.2),
+                    drift: random(-0.8, 0.8),
                     shapes: ["square"],
                 });
             });
