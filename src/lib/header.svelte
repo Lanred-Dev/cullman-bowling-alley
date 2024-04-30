@@ -1,10 +1,6 @@
 <script lang="ts">
     const LINKS = [
         {
-            name: "About",
-            url: "/",
-        },
-        {
             name: "Leagues",
             url: "/leagues",
         },
@@ -13,8 +9,8 @@
             url: "/hours-and-rates",
         },
         {
-            name: "Contact and Birthdays",
-            url: "/contact",
+            name: "Birthdays",
+            url: "/contact#birthdays",
         },
         {
             name: "Valley Tavern and Grille",
@@ -24,14 +20,16 @@
 
     let showMenu: boolean = false;
 
-    $: () => {
+    function toggleMenu() {
+        showMenu != showMenu;
+
         if (showMenu) {
             document.body.scrollTop = 0;
         }
-    };
+    }
 </script>
 
-<header class="relative flex w-full select-none flex-col items-center justify-between gap-4 px-[7%] py-8 md:flex-row md:py-12 2xl:px-[11%] {showMenu ? 'z-10 backdrop-blur-md' : ''}">
+<header class="relative z-10 flex w-full select-none flex-col items-center justify-between gap-4 px-[7%] py-8 md:flex-row md:py-12 2xl:px-[11%] {showMenu ? 'bg-primary' : ''}">
     <div class="flex w-full items-center justify-between lg:w-fit lg:justify-start">
         <div class="text-left">
             <p class="text-2xl font-bold sm:text-3xl">Cullman Bowling Center</p>
@@ -55,22 +53,19 @@
             </div>
         </div>
 
-        <button
-            on:click={() => {
-                showMenu = !showMenu;
-            }}
-            class="aspect-square h-10 lg:hidden"
-        >
+        <button on:click={toggleMenu} class="aspect-square w-10 md:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-full w-full fill-primary">
                 <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
             </svg>
         </button>
     </div>
 
-    <nav class="absolute top-full w-full list-none flex-col gap-2 px-[7%] text-left text-lg font-medium text-black md:static md:px-0 lg:flex lg:w-fit lg:flex-row lg:gap-8 {showMenu ? 'z-10 flex h-screen bg-primary' : 'hidden'}">
+    <nav class="absolute top-full w-full list-none flex-col gap-2 px-[7%] text-left text-lg font-medium text-black md:static md:px-0 lg:flex lg:w-fit lg:flex-row lg:gap-8 {showMenu ? 'flex h-screen bg-primary' : 'hidden'}">
         {#each LINKS as link}
             <li><a href={link.url}>{link.name}</a></li>
         {/each}
+
+        <li><a class="primary" href="/contact">Contact Us</a></li>
     </nav>
 </header>
 
