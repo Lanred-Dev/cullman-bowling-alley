@@ -13,7 +13,7 @@
             url: "/hours-and-rates",
         },
         {
-            name: "Contact and Reservations",
+            name: "Contact and Birthdays",
             url: "/contact",
         },
         {
@@ -31,7 +31,7 @@
     };
 </script>
 
-<header class="relative flex w-full select-none flex-col items-center justify-between gap-4 px-[7%] py-8 md:flex-row md:py-12 2xl:px-[11%] {showMenu ? 'backdrop-blur-md z-10' : ''}">
+<header class="relative flex w-full select-none flex-col items-center justify-between gap-4 px-[7%] py-8 md:flex-row md:py-12 2xl:px-[11%] {showMenu ? 'z-10 backdrop-blur-md' : ''}">
     <div class="flex w-full items-center justify-between lg:w-fit lg:justify-start">
         <div class="text-left">
             <p class="text-2xl font-bold sm:text-3xl">Cullman Bowling Center</p>
@@ -67,7 +67,7 @@
         </button>
     </div>
 
-    <nav class="absolute top-full w-full list-none flex-col gap-2 px-[7%] text-left text-lg font-medium text-black md:static md:px-0 lg:flex lg:w-fit lg:flex-row lg:gap-8 {showMenu ? 'flex h-screen bg-primary z-10' : 'hidden'}">
+    <nav class="absolute top-full w-full list-none flex-col gap-2 px-[7%] text-left text-lg font-medium text-black md:static md:px-0 lg:flex lg:w-fit lg:flex-row lg:gap-8 {showMenu ? 'z-10 flex h-screen bg-primary' : 'hidden'}">
         {#each LINKS as link}
             <li><a href={link.url}>{link.name}</a></li>
         {/each}

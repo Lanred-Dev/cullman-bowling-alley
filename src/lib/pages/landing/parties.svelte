@@ -64,7 +64,7 @@
         {
             text: "Learn more",
             type: "secondary",
-            url: "/birthdays",
+            url: "/contact#birthdays",
         },
     ]}
 >
