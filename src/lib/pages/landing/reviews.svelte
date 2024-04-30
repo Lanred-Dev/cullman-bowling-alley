@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Section from "./components/section.svelte";
     import Review from "./components/review.svelte";
     import type { review } from "./types";
 
@@ -117,16 +118,9 @@
     ];
 </script>
 
-<span id="reviews" class="relative" />
-
-<div class="section relative mb-[20vh] flex h-fit min-h-screen w-full flex-col items-center justify-center gap-10 px-5 sm:px-10 md:mb-0 lg:h-screen lg:px-0" id="section-reviews">
-    <div class="flex w-full flex-col items-center justify-center text-center">
-        <h1 class="text-4xl font-bold md:text-5xl">700+ Reviews, 4.3 Overall Rating</h1>
-        <p class="mt-5 w-full px-5 text-lg sm:px-10 md:text-xl lg:w-fit lg:max-w-3xl lg:px-0">Discover what others are saying about us with over 700 reviews and a 4.3 overall rating. Dive into the feedback from our community and see why they love bowling with us!</p>
-    </div>
-
-    <div class="relative mt-10 max-h-[70vh] w-full overflow-hidden">
-        <div class="grid w-full grid-cols-1 gap-6 overflow-hidden px-4 sm:grid-cols-2 sm:px-[5%] md:px-[10%] lg:grid-cols-3 lg:px-[16%]">
+<Section id="reviews" direction="vertical" title="700+ Reviews, 4.3 Overall Rating" description="Discover what others are saying about us with over 700 reviews and a 4.3 overall rating. Dive into the feedback from our community and see why they love bowling with us!">
+    <div class="relative mt-10 max-h-[70vh] w-full overflow-hidden lg:max-h-[80vh]">
+        <div class="grid w-full grid-cols-1 gap-6 overflow-hidden px-4 sm:grid-cols-2 sm:px-[4%] md:px-[9%] lg:grid-cols-3 lg:px-[15%]">
             {#each Array(3) as _value, index}
                 <ul class="space-y-6 {index == 1 ? 'hidden sm:block' : index === 2 ? 'hidden lg:block' : ''}">
                     {#each REVIEWS[index] as review}
@@ -146,4 +140,4 @@
             </a>
         </div>
     </div>
-</div>
+</Section>
