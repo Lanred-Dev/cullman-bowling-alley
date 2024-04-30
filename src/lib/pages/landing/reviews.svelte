@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Section from "./components/section.svelte";
     import Review from "./components/review.svelte";
     import type { review } from "./types";
 
@@ -117,16 +118,9 @@
     ];
 </script>
 
-<span id="reviews" class="relative" />
-
-<div class="section relative mb-[25vh] flex h-fit min-h-screen w-full flex-col items-center justify-center gap-10 px-5 sm:px-10 md:mb-0 lg:h-screen lg:px-0" id="section-reviews">
-    <div class="flex w-full flex-col items-center justify-center text-center">
-        <h1 class="text-4xl font-bold md:text-5xl">700+ Reviews, 4.3 Overall Rating</h1>
-        <p class="mt-5 w-full px-5 text-lg sm:px-10 md:text-xl lg:w-fit lg:max-w-3xl lg:px-0">Discover what others are saying about us with over 700 reviews and a 4.3 overall rating. Dive into the feedback from our community and see why they love bowling with us!</p>
-    </div>
-
-    <div class="relative mt-10 max-h-[70vh] w-full overflow-hidden">
-        <div class="grid w-full grid-cols-1 gap-6 overflow-hidden px-4 sm:grid-cols-2 sm:px-[5%] md:px-[10%] lg:grid-cols-3 lg:px-[16%]">
+<Section id="reviews" direction="vertical" title="700+ Reviews, 4.3 Overall Rating" description="Discover what others are saying about us with over 700 reviews and a 4.3 overall rating. Dive into the feedback from our community and see why they love bowling with us!">
+    <div class="relative mt-10 max-h-[70vh] w-full overflow-hidden lg:max-h-[80vh]">
+        <div class="grid w-full grid-cols-1 gap-6 overflow-hidden px-4 sm:grid-cols-2 sm:px-[4%] md:px-[9%] lg:grid-cols-3 lg:px-[15%]">
             {#each Array(3) as _value, index}
                 <ul class="space-y-6 {index == 1 ? 'hidden sm:block' : index === 2 ? 'hidden lg:block' : ''}">
                     {#each REVIEWS[index] as review}
@@ -137,7 +131,7 @@
         </div>
 
         <div class="absolute bottom-0 z-[1] h-[30%] w-full bg-gradient-to-b from-[#fafafa00] to-[#fafafa]">
-            <a class="secondary absolute bottom-0 left-1/2 flex -translate-x-1/2 items-center justify-center gap-0.5 w-full" href="https://www.google.com/maps/place/Cullman+Bowling+Center/@34.1670637,-86.8698413,17z/data=!4m8!3m7!1s0x8889cb05e017bacf:0x7e545bbfc78b72f5!8m2!3d34.1670637!4d-86.8672664!9m1!1b1!16s%2Fg%2F1tjpr855?entry=ttu">
+            <a class="secondary absolute bottom-0 left-1/2 flex w-full -translate-x-1/2 items-center justify-center gap-0.5" href="https://www.google.com/maps/place/Cullman+Bowling+Center/@34.1670637,-86.8698413,17z/data=!4m8!3m7!1s0x8889cb05e017bacf:0x7e545bbfc78b72f5!8m2!3d34.1670637!4d-86.8672664!9m1!1b1!16s%2Fg%2F1tjpr855?entry=ttu">
                 See all reviews
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#212121" viewBox="0 0 24 24" stroke-width="1" stroke="#212121" class="aspect-square h-[1.15rem] pt-0.5">
@@ -146,4 +140,4 @@
             </a>
         </div>
     </div>
-</div>
+</Section>

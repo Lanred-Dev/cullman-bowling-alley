@@ -1,17 +1,18 @@
 <script lang="ts">
-    export let id: string;
+    import HeroBackground from "../heroBackground.svelte";
+
     export let title: string;
-    export let description: string;
+    export let description: string = "";
     export let actions: { text: string; url: string; type: "primary" | "secondary" }[] = [];
-    export let direction: "horizontal" | "vertical" = "horizontal";
 </script>
 
-<span {id} class="relative" />
+<div class="relative mb-[0vh] h-screen w-screen md:mb-[15vh] md:h-[80vh] lg:mb-[20vh]">
+    <div class="absolute left-1/2 top-[5%] flex w-screen -translate-x-1/2 flex-col items-center justify-center px-4 md:top-[15%] md:px-[16%]">
+        <h1 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">{@html title}</h1>
 
-<div class="section relative mb-[20vh] flex h-fit w-full flex-col justify-start gap-2 px-5 sm:px-10 md:mb-0 lg:h-screen {direction === 'horizontal' ? 'lg:flex-row' : ''} lg:items-center lg:justify-between" id="section-{id}">
-    <div class="flex h-full w-full flex-col items-center justify-center text-center {direction === 'horizontal' ? 'lg:w-[50%] lg:items-start lg:pl-[16%]' : ''} {direction === 'horizontal' ? 'lg:text-left' : ''}">
-        <h1 class="text-4xl font-bold md:text-5xl">{@html title}</h1>
-        <p class="mt-5 text-lg md:text-xl {direction === 'vertical' ? 'w-full px-5 sm:px-10 lg:w-fit lg:max-w-3xl lg:px-0' : ''}">{description}</p>
+        {#if description.length > 0}
+            <p class="mt-5 w-full px-5 text-lg sm:px-10 md:text-xl lg:w-fit lg:max-w-3xl lg:px-0">{@html description}</p>
+        {/if}
 
         {#if actions.length > 0}
             <div class="mt-10 flex gap-2">
@@ -30,7 +31,5 @@
         {/if}
     </div>
 
-    <div class="relative h-fit w-full lg:h-full lg:w-auto lg:flex-grow">
-        <slot />
-    </div>
+    <HeroBackground />
 </div>
