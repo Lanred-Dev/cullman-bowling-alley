@@ -61,16 +61,6 @@
     body {
         @apply overflow-hidden bg-primary text-center font-balooBhaijaan2 text-primary;
     }
-
-    .pageViewport {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: auto;
-    }
-
-    .pageViewport::-webkit-scrollbar {
-        @apply hidden;
-    }
 }
 
 @layer components {

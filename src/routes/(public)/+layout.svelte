@@ -3,7 +3,7 @@
     import Footer from "$lib/components/footer.svelte";
 </script>
 
-<div class="pageViewport h-screen w-full overflow-x-hidden">
+<div class="pageViewport h-screen w-full overflow-x-hidden overflow-y-scroll">
     <Header />
 
     <main class="h-fit w-full">
