@@ -6,6 +6,6 @@
 
 <Hero title="Contact Us" mini={true} />
 
-<div class="grid grid-cols-1 grid-rows-1">
+<div class="grid grid-cols-3 grid-rows-1">
     <Location />
 </div>
