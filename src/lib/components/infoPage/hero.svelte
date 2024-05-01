@@ -4,10 +4,11 @@
     export let title: string;
     export let description: string = "";
     export let actions: { text: string; url: string; type: "primary" | "secondary" }[] = [];
+    export let mini: boolean = false;
 </script>
 
-<div class="relative mb-[0vh] h-screen w-screen md:mb-[15vh] md:h-[80vh] lg:mb-[20vh]">
-    <div class="absolute left-1/2 top-[5%] flex w-screen -translate-x-1/2 flex-col items-center justify-center px-4 md:top-[15%] md:px-[16%]">
+<div class="relative mb-[0vh] w-screen {mini ? 'md:h-[30vh]' : 'h-screen md:mb-[15vh] md:h-[80vh] lg:mb-[20vh]'}">
+    <div class="absolute left-1/2 top-10 flex w-screen -translate-x-1/2 flex-col items-center justify-center px-4 md:top-24 md:px-[16%]">
         <h1 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">{@html title}</h1>
 
         {#if description.length > 0}
@@ -31,5 +32,7 @@
         {/if}
     </div>
 
-    <HeroBackground />
+    <div class="absolute left-0 top-0 z-[-1] w-full {mini ? 'h-screen md:mb-[15vh] md:h-[80vh] lg:mb-[20vh]' : 'h-full w-full'}">
+        <HeroBackground />
+    </div>
 </div>
