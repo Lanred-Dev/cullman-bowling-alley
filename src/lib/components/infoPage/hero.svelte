@@ -7,8 +7,8 @@
     export let mini: boolean = false;
 </script>
 
-<div class="relative mb-[0vh] w-screen {mini ? 'mb-[5vh] h-[20vh] md:h-[30vh]' : 'h-screen md:mb-[15vh] md:h-[80vh] lg:mb-[20vh]'}">
-    <div class="absolute left-1/2 top-10 flex w-screen -translate-x-1/2 flex-col items-center justify-center px-4 md:top-24 md:px-[16%]">
+<div class="relative top-10 mb-[0vh] w-screen md:pt-24 {mini ? 'mb-[15vh] min-h-[20vh] md:h-[30vh] md:min-h-0' : 'h-screen md:mb-[15vh] md:h-[80vh] lg:mb-[20vh]'}">
+    <div class="flex w-screen flex-col items-center justify-center px-4 md:px-[16%]">
         <h1 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">{@html title}</h1>
 
         {#if description.length > 0}
