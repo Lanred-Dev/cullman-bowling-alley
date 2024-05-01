@@ -68,7 +68,7 @@
         },
     ]}
 >
-    <canvas class="aspect-square w-full lg:absolute lg:left-1/2 lg:top-1/2 lg:h-full lg:-translate-x-1/2 lg:-translate-y-1/2" bind:this={confettiCanvas} />
+    <canvas class="aspect-square w-full lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2" bind:this={confettiCanvas} />
 
     <div class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-end justify-center sm:gap-10">
         {#each Array(3) as _value, index}
