@@ -19,6 +19,6 @@
 
     <div class="mt-20 w-full text-center md:mt-10 md:text-left">
         <p class="text-4xl font-bold">Questions About Birthdays?</p>
-        <p class="mt-3 text-lg sm:text-base">Before you dial, visit <a class="font-bold underline" href="/birthdays">this page</a> for all the details!If you're ready to plan or still need assistance, give us a call.</p>
+        <p class="mt-3 text-lg sm:text-base">Before you dial, visit <a class="font-bold underline" href="/birthdays">this page</a> for all the details! If you're ready to plan or still need assistance, give us a call.</p>
     </div>
 </div>
