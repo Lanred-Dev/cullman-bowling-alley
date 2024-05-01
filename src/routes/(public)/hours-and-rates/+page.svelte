@@ -2,4 +2,4 @@
     import Hero from "$lib/components/infoPage/hero.svelte";
 </script>
 
-<Hero title="Hours and Rates" />
+<Hero title="Hours and Rates" mini={true} />
