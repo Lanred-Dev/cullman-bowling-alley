@@ -34,6 +34,6 @@
     });
 </script>
 
-<div class="relative aspect-square w-full overflow-hidden rounded-md">
+<div class="relative aspect-square max-h-[450px] w-full overflow-hidden rounded-md">
     <div class="h-full w-full" bind:this={mapContainer} />
 </div>
