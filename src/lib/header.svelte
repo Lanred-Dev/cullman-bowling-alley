@@ -21,10 +21,14 @@
     let showMenu: boolean = false;
 
     function toggleMenu() {
-        showMenu != showMenu;
+        showMenu = !showMenu;
 
         if (showMenu) {
-            document.body.scrollTop = 0;
+            document.querySelector(".pageViewport")!.scrollTo({
+                left: 0,
+                top: 0,
+                behavior: "instant",
+            });
         }
     }
 </script>
@@ -32,7 +36,7 @@
 <header class="relative z-10 flex w-full select-none flex-col items-center justify-between gap-4 px-[7%] py-8 md:flex-row md:py-12 2xl:px-[11%] {showMenu ? 'bg-primary' : ''}">
     <div class="flex w-full items-center justify-between lg:w-fit lg:justify-start">
         <div class="text-left">
-            <p class="text-2xl font-bold sm:text-3xl">Cullman Bowling Center</p>
+            <a class="text-2xl font-bold sm:text-3xl" href="/">Cullman Bowling Center</a>
 
             <div class="mt-1.5 flex flex-col items-start gap-0 font-bold md:flex-row md:items-center md:gap-5 [&>a>svg]:aspect-square [&>a>svg]:h-5 [&>a]:flex [&>a]:items-center [&>a]:gap-1">
                 <a href="tel:256-734-2600">
@@ -53,7 +57,7 @@
             </div>
         </div>
 
-        <button on:click={toggleMenu} class="aspect-square w-10 md:hidden">
+        <button on:click={toggleMenu} class="aspect-square w-10 lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-full w-full fill-primary">
                 <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
             </svg>
