@@ -5,7 +5,7 @@
 
     const PRESENT_COLORS: string[] = ["#44a7f2", "#ff460f", "#f5bd3d"];
     const CONFETTI_COLORS: Array<string> = ["#26ccff", "#a25afd", "#ff5e7e", "#88ff5a", "#fcff42", "#ffa62d", "#ff36ff"];
-    const CONFETTI_COUNT: number = 10;
+    const CONFETTI_COUNT: number = 5;
     const TICKS: number = 80;
 
     let confettiCanvas: HTMLCanvasElement;
@@ -68,9 +68,9 @@
         },
     ]}
 >
-    <canvas class="aspect-square w-full lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2" bind:this={confettiCanvas} />
+    <canvas class="z-10 aspect-square w-full lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2" bind:this={confettiCanvas} />
 
-    <div class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-end justify-center sm:gap-10">
+    <div class="absolute left-1/2 top-1/2 z-[1] flex -translate-x-1/2 -translate-y-1/2 items-end justify-center sm:gap-10">
         {#each Array(3) as _value, index}
             <div class="present" style="--color: {PRESENT_COLORS[index]};" data-id={index}>
                 <div class="lid" />
