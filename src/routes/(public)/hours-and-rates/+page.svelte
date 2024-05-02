@@ -2,4 +2,4 @@
     import Hero from "$lib/components/infoPage/hero.svelte";
 </script>
 
-<Hero title="Hours and Rates" mini={true} />
+<Hero title="Hours and Rates" description="Feel free to explore our operating hours and pricing details below. If you need further assistance or have any inquiries, don't hesitate to reach out." mini={true} />
