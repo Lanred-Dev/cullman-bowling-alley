@@ -14,7 +14,7 @@
         return Math.random() * (max - min) + min;
     }
 
-    function setup() {
+    onMount(() => {
         const confetti = create(confettiCanvas, {
             resize: true,
             useWorker: true,
@@ -46,9 +46,7 @@
         return () => {
             clearInterval(updateInterval);
         };
-    }
-
-    onMount(setup);
+    });
 </script>
 
 <Section

@@ -9,7 +9,7 @@
 <span {id} class="relative" />
 
 <div class="section relative mb-[20vh] flex h-fit w-full flex-col justify-start gap-2 px-5 sm:px-10 md:mb-[15vh] lg:min-h-[60vh] {direction === 'horizontal' ? 'lg:flex-row' : ''} lg:items-center lg:justify-between" id="section-{id}">
-    <div class="flex h-full w-full flex-col items-center justify-center text-center {direction === 'horizontal' ? 'lg:w-[50%] lg:items-start lg:pl-[16%]' : ''} {direction === 'horizontal' ? 'lg:text-left' : ''}">
+    <div class="flex h-full w-full flex-col items-center justify-center text-center {direction === 'horizontal' ? 'lg:w-[50%] lg:items-start lg:pl-[16%] lg:text-left' : ''}">
         <h1 class="text-4xl font-bold md:text-5xl">{@html title}</h1>
         <p class="mt-5 text-lg md:text-xl {direction === 'vertical' ? 'w-full px-5 sm:px-10 lg:w-fit lg:max-w-3xl lg:px-0' : ''}">{description}</p>
 
